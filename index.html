@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Caleb Restaurant And Take Away | Bukuya, Uganda</title>
+<meta name="description" content="Enjoy East African food at Caleb Restaurant And Take Away in Bukuya Town, Kasanda District, Uganda. Contact us on WhatsApp for food orders and delivery enquiries.">
+<meta name="theme-color" content="#151b16">
+<meta name="robots" content="index, follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --dark: #151b16;
+  --dark2: #20291f;
+  --gold: #e8b85c;
+  --cream: #f8f4eb;
+  --muted: #b9c0b5;
+  --white: #fff;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--white);
+  background: var(--dark);
+  line-height: 1.65;
+}
+a { color: inherit; text-decoration: none; }
+img { width: 100%; display: block; object-fit: cover; }
+.container { width: min(1160px, 90%); margin: auto; }
+.gold { color: var(--gold); }
+h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.15; }
+h2 { font-size: clamp(2rem, 4vw, 3.3rem); }
+section { padding: 90px 0; }
+.section-intro { max-width: 650px; margin: 15px 0 38px; color: var(--muted); }
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: .76rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  background: var(--gold);
+  color: #171b13;
+  padding: 14px 23px;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: .2s;
+  border: 1px solid var(--gold);
+}
+.btn:hover { transform: translateY(-2px); background: #f4cb7e; }
+.btn-outline { background: transparent; color: white; border-color: #ffffff80; }
+.btn-outline:hover { color: var(--dark); border-color: var(--gold); }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #151b16f5;
+  border-bottom: 1px solid #ffffff17;
+}
+.nav {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand-mark {
+  width: 45px; height: 45px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  display: grid; place-items: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+}
+.brand-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; }
+.brand-sub { color: var(--gold); font-size: .68rem; letter-spacing: 2px; text-transform: uppercase; }
+.nav-links { display: flex; align-items: center; gap: 25px; font-size: .9rem; }
+.nav-links a:not(.btn):hover { color: var(--gold); }
+.nav .btn { padding: 11px 16px; }
+
+.hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, #101610f5 0%, #101610d9 43%, #10161038 100%),
+    url('https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=2000&q=85') center/cover;
+}
+.hero-content { max-width: 690px; padding: 95px 0; }
+.hero h1 { font-size: clamp(3rem, 7vw, 5.6rem); letter-spacing: -1.5px; margin-bottom: 23px; }
+.hero p { color: #e4e5dc; max-width: 550px; font-size: 1.08rem; margin-bottom: 30px; }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 13px; }
+.hero-note { color: #e9d5a7; margin-top: 24px; font-size: .9rem; }
+
+.features { background: var(--gold); color: #1b2117; padding: 22px 0; }
+.feature-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: center; }
+.feature { font-size: .92rem; font-weight: 700; }
+
+.menu-section { background: var(--cream); color: #20251d; }
+.menu-section .section-intro { color: #666b61; }
+.menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.food-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px #20251d0d;
+  transition: transform .25s, box-shadow .25s;
+}
+.food-card:hover { transform: translateY(-5px); box-shadow: 0 14px 35px #20251d1b; }
+.food-card img { height: 225px; }
+.food-info { padding: 22px; }
+.food-info h3 { font-size: 1.5rem; margin-bottom: 9px; }
+.food-info p { color: #666b61; font-size: .93rem; min-height: 53px; }
+.food-bottom { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 18px; }
+.price { font-size: .85rem; font-weight: 700; color: #76551b; }
+.order-link { color: #4b622f; font-weight: 700; font-size: .87rem; }
+.order-link:hover { text-decoration: underline; }
+.menu-note { margin-top: 25px; font-size: .9rem; color: #666b61; }
+
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.about-image { position: relative; }
+.about-image img { height: 480px; border-radius: 8px; }
+.image-label {
+  position: absolute; bottom: 20px; left: 20px;
+  background: var(--gold); color: #1b2117;
+  padding: 14px 19px; font-weight: 700;
+}
+.about-copy p { color: var(--muted); margin: 20px 0; }
+.about-points { list-style: none; display: grid; gap: 12px; margin: 25px 0 30px; }
+.about-points li::before { content: '✓'; color: var(--gold); font-weight: 700; margin-right: 11px; }
+
+.delivery { background: var(--dark2); }
+.delivery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; align-items: center; }
+.delivery p { color: var(--muted); margin: 18px 0 26px; }
+.delivery-card { background: #151b16; border: 1px solid #ffffff18; padding: 30px; border-radius: 8px; }
+.delivery-row { display: flex; gap: 15px; align-items: flex-start; padding: 17px 0; border-bottom: 1px solid #ffffff16; }
+.delivery-row:last-child { border-bottom: 0; }
+.delivery-icon { font-size: 1.5rem; width: 35px; }
+.delivery-row strong { display: block; margin-bottom: 4px; }
+.delivery-row span { color: var(--muted); font-size: .92rem; }
+
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.contact-box { padding: 30px; border: 1px solid #ffffff1e; border-radius: 8px; }
+.contact-box h3 { font-size: 1.5rem; margin-bottom: 20px; }
+.contact-line { margin: 18px 0; color: var(--muted); }
+.contact-line strong { display: block; color: white; margin-bottom: 4px; }
+.map-frame { width: 100%; height: 330px; border: 0; border-radius: 8px; }
+.map-placeholder { background: var(--dark2); padding: 35px; border-radius: 8px; }
+.map-placeholder p { color: var(--muted); margin: 12px 0 20px; }
+
+.cta { background: var(--gold); color: #1b2117; text-align: center; padding: 65px 0; }
+.cta h2 { max-width: 750px; margin: auto; }
+.cta p { margin: 15px auto 25px; max-width: 570px; }
+.cta .btn { background: var(--dark); border-color: var(--dark); color: white; }
+footer { padding: 38px 0; background: #101510; }
+.footer-row { display: flex; justify-content: space-between; align-items: center; gap: 25px; flex-wrap: wrap; }
+footer p { color: var(--muted); font-size: .85rem; }
+.footer-links { display: flex; gap: 20px; font-size: .9rem; }
+
+.whatsapp-float {
+  position: fixed; right: 22px; bottom: 22px; z-index: 20;
+  background: #25d366; color: #102016;
+  width: 61px; height: 61px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 1.8rem;
+  box-shadow: 0 5px 20px #0006;
+}
+.whatsapp-float:hover { transform: scale(1.07); }
+
+@media (max-width: 850px) {
+  .nav { padding: 14px 0; flex-wrap: wrap; }
+  .nav-links { width: 100%; justify-content: center; gap: 16px; flex-wrap: wrap; }
+  .nav-links .btn { display: none; }
+  .hero { min-height: 570px; }
+  .menu-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-grid, .delivery-grid, .contact-grid { grid-template-columns: 1fr; gap: 35px; }
+  .about-image img { height: 360px; }
+}
+@media (max-width: 540px) {
+  section { padding: 65px 0; }
+  .container { width: 91%; }
+  .brand-name { font-size: .92rem; }
+  .nav-links { gap: 12px; font-size: .8rem; }
+  .hero h1 { font-size: 3.2rem; }
+  .hero { min-height: 570px; }
+  .menu-grid { grid-template-columns: 1fr; }
+  .food-card img { height: 240px; }
+  .feature-row { grid-template-columns: 1fr; gap: 8px; }
+  .contact-box { padding: 23px; }
+  .footer-row { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Caleb Restaurant home">
+      <div class="brand-mark">C</div>
+      <div>
+        <div class="brand-name">Caleb Restaurant</div>
+        <div class="brand-sub">And Take Away</div>
+      </div>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#menu">Our Menu</a>
+      <a href="#about">About Us</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="https://wa.me/256772456258?text=Hello%20Caleb%20Restaurant%2C%20I%20would%20like%20to%20order%20food." target="_blank" rel="noopener">Order on WhatsApp ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">Welcome to Caleb Restaurant</div>
+      <h1>Real East African Food. <span class="gold">Made with Heart.</span></h1>
+      <p>Discover the comforting flavours of East Africa, from traditional matooke and luwombo to delicious pilau, chapati and nyama choma.</p>
+      <div class="hero-buttons">
+        <a class="btn" href="#menu">Explore Our Menu ↓</a>
+        <a class="btn btn-outline" href="https://wa.me/256772456258?text=Hello%20Caleb%20Restaurant%2C%20I%20would%20like%20to%20ask%20about%20food%20orders." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+      <div class="hero-note">📍 Bukuya Town, Kasanda District, Uganda</div>
+    </div>
+  </div>
+</section>
+
+<div class="features">
+  <div class="container feature-row">
+    <div class="feature">✦ East African Favourites</div>
+    <div class="feature">✦ Friendly Service</div>
+    <div class="feature">✦ WhatsApp Order Enquiries</div>
+  </div>
+</div>
+
+<section class="menu-section" id="menu">
+  <div class="container">
+    <div class="eyebrow">Taste the Tradition</div>
+    <h2>Our <span class="gold">Favourite Meals</span></h2>
+    <p class="section-intro">Explore a selection of East African favourites. Contact us to confirm today's availability, portions and prices.</p>
+
+    <div class="menu-grid">
+      <article class="food-card">
+        <img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&w=900&q=80" alt="Traditional East African meal" loading="lazy">
+        <div class="food-info">
+          <h3>Matooke</h3>
+          <p>A much-loved East African staple, enjoyed with a sauce or accompaniment of your choice.</p>
+          <div class="food-bottom">
+            <span class="price">Ask for today's price</span>
+            <a class="order-link" href="https://wa.me/256772456258?text=Hello%2C%20I%20would%20like%20to%20order%20matooke." target="_blank" rel="noopener">Order ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="food-card">
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80" alt="A hearty traditional meal" loading="lazy">
+        <div class="food-info">
+          <h3>Luwombo</h3>
+          <p>A traditional Ugandan favourite known for its rich flavour and comforting character.</p>
+          <div class="food-bottom">
+            <span class="price">Ask for today's price</span>
+            <a class="order-link" href="https://wa.me/256772456258?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20luwombo." target="_blank" rel="noopener">Order ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="food-card">
+        <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=80" alt="Rice dish" loading="lazy">
+        <div class="food-info">
+          <h3>Pilau</h3>
+          <p>Fragrant, warmly spiced rice for a satisfying lunch or dinner.</p>
+          <div class="food-bottom">
+            <span class="price">Ask for today's price</span>
+            <a class="order-link" href="https://wa.me/256772456258?text=Hello%2C%20I%20would%20like%20to%20order%20pilau." target="_blank" rel="noopener">Order ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="food-card">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80" alt="Freshly prepared food" loading="lazy">
+        <div class="food-info">
+          <h3>Chapati</h3>
+          <p>A versatile East African favourite, perfect on its own or alongside a meal.</p>
+          <div class="food-bottom">
+            <span class="price">Ask for today's price</span>
+            <a class="order-link" href="https://wa.me/256772456258?text=Hello%2C%20I%20would%20like%20to%20order%20chapati." target="_blank" rel="noopener">Order ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="food-card">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80" alt="Grilled meat" loading="lazy">
+        <div class="food-info">
+          <h3>Nyama Choma</h3>
+          <p>Grilled meat for those moments when you want a hearty, savoury meal.</p>
+          <div class="food-bottom">
+            <span class="price">Ask for today's price</span>
+            <a class="order-link" href="https://wa.me/256772456258?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20nyama%20choma." target="_blank" rel="noopener">Order ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="food-card">
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80" alt="A selection of food" loading="lazy">
+        <div class="food-info">
+          <h3>Ask About Today's Menu</h3>
+          <p>Looking for something else? Contact our team to enquire about available dishes.</p>
+          <div class="food-bottom">
+            <span class="price">Menu enquiries</span>
+            <a class="order-link" href="https://wa.me/256772456258?text=Hello%20Caleb%20Restaurant%2C%20what%20meals%20are%20available%20today%3F" target="_blank" rel="noopener">Ask us ↗</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p class="menu-note">Menu photos are illustrative and may not show the exact dishes served at the restaurant. Prices and availability should be confirmed directly.</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1100&q=85" alt="Food prepared for sharing" loading="lazy">
+      <div class="image-label">A Taste of East Africa</div>
+    </div>
+    <div class="about-copy">
+      <div class="eyebrow">Our Restaurant</div>
+      <h2>Good Food Brings <span class="gold">People Together.</span></h2>
+      <p>Welcome to Caleb Restaurant And Take Away, located in Bukuya Town, Kasanda District, Uganda.</p>
+      <p>We celebrate the familiar flavours of East African cooking and make it easy for customers to contact us about meals, takeaway orders and delivery enquiries.</p>
+      <ul class="about-points">
+        <li>East African meal favourites</li>
+        <li>Simple WhatsApp ordering enquiries</li>
+        <li>Takeaway and delivery enquiries by phone</li>
+      </ul>
+      <a class="btn" href="https://wa.me/256772456258?text=Hello%20Caleb%20Restaurant%2C%20I%20would%20like%20to%20know%20more." target="_blank" rel="noopener">Get in Touch ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="delivery" id="delivery">
+  <div class="container delivery-grid">
+    <div>
+      <div class="eyebrow">Easy Ordering</div>
+      <h2>Craving Something <span class="gold">Delicious?</span></h2>
+      <p>Contact Caleb Restaurant And Take Away to ask about available meals, takeaway arrangements and delivery options in and around Bukuya Town.</p>
+      <a class="btn" href="https://wa.me/256772456258?text=Hello%20Caleb%20Restaurant%2C%20I%20would%20like%20to%20ask%20about%20delivery." target="_blank" rel="noopener">Ask About Delivery ↗</a>
+    </div>
+    <div class="delivery-card">
+      <div class="delivery-row">
+        <div class="delivery-icon">📍</div>
+        <div><strong>Our Location</strong><span>Bukuya Town, Kasanda District, Uganda</span></div>
+      </div>
+      <div class="delivery-row">
+        <div class="delivery-icon">💬</div>
+        <div><strong>WhatsApp Orders</strong><span>0772456258</span></div>
+      </div>
+      <div class="delivery-row">
+        <div class="delivery-icon">🛵</div>
+        <div><strong>Delivery Enquiries</strong><span>Contact us to confirm your area, delivery availability and charges.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="eyebrow">Visit or Contact Us</div>
+    <h2>Find <span class="gold">Caleb Restaurant</span></h2>
+    <p class="section-intro">We are in Bukuya Town, Kasanda District, Uganda. Contact us for the exact location, directions and current service information.</p>
+
+    <div class="contact-grid">
+      <div class="contact-box">
+        <h3>Let's Talk</h3>
+        <div class="contact-line">
+          <strong>Restaurant</strong>
+          Caleb Restaurant And Take Away
+        </div>
+        <div class="contact-line">
+          <strong>Location</strong>
+          Bukuya Town, Kasanda District, Uganda
+        </div>
+        <div class="contact-line">
+          <strong>Phone / WhatsApp</strong>
+          <a href="https://wa.me/256772456258" target="_blank" rel="noopener">0772456258 ↗</a>
+        </div>
+        <div class="contact-line">
+          <strong>Opening Hours</strong>
+          Please contact the restaurant to confirm today's hours.
+        </div>
+        <a class="btn" href="https://wa.me/256772456258?text=Hello%2C%20please%20send%20me%20directions%20to%20Caleb%20Restaurant%20in%20Bukuya." target="_blank" rel="noopener">Ask for Directions ↗</a>
+      </div>
+
+      <div class="map-placeholder">
+        <h3>Visit Us in Bukuya</h3>
+        <p>Open Google Maps to view Bukuya Town, Kasanda District, and get directions. The exact restaurant pin can be added when its precise address is confirmed.</p>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Bukuya+Town%2C+Kasanda+District%2C+Uganda" target="_blank" rel="noopener">Open Google Maps ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Make Your Next Meal a <span>Good One.</span></h2>
+    <p>Message Caleb Restaurant And Take Away to ask about the menu, takeaway and delivery.</p>
+    <a class="btn" href="https://wa.me/256772456258?text=Hello%20Caleb%20Restaurant%2C%20I%20am%20ready%20to%20make%20an%20enquiry." target="_blank" rel="noopener">Chat With Us on WhatsApp ↗</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div class="brand">
+      <div class="brand-mark">C</div>
+      <div>
+        <div class="brand-name">Caleb Restaurant</div>
+        <div class="brand-sub">And Take Away</div>
+      </div>
+    </div>
+    <p>© <span id="year"></span> Caleb Restaurant And Take Away. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+      <a href="https://wa.me/256772456258" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/256772456258?text=Hello%20Caleb%20Restaurant%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener" aria-label="Contact Caleb Restaurant on WhatsApp">☏</a>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
